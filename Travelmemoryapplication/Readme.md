@@ -228,3 +228,14 @@ export const baseurl=https://backend.sriharsha.com
 
 * click on create and configure the appropriate name for the load balancers
 
+* we need to give the name and choose the internet-facing option in the scheme.
+
+* Then we need to configure the network and select the virtual private cloud (VPC) where we created the ec2 instances.
+
+* select the vpc and check the availability zones and we need to configure a lister in using the port that we configure and a rule for the listerner through the ALB routes the request to it targets.
+
+* This process we need to do for both frontend and backend then we need to specify in the cloudflare portal and we have to choose our application website and have to specify the CNAME record for both frontend and backend .
+
+* Finally we need to edit our frontend ec2 instance and change the URL.JS for the internal elb ip address from the load balancer then we need to resstart our frontend application after that setting the internal elb for the backend the traffic will flows through the internal loabalancer to the specifc target group that we specified .
+
+* setup has done sucessfully.
